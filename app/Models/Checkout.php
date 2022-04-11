@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Checkout extends Model
 {
-    use HasFactory,SoftDeletes;
+    use HasFactory, SoftDeletes;
 
-    protected $fillabel = ['user_id','camp_id','card_number','expired','cvc','is_paid']
+    protected $fillabel = ['user_id','camp_id','card_number','expired','cvc','is_paid']; 
+
 }
