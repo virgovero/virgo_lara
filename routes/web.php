@@ -42,7 +42,7 @@ Route::middleware(['auth'])->group(function (){
     Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
     //user dashboard
-    Route::prefix('user/dashboard')->namespace('User')->name('user.')->middleware('ensureUserRole:user')->group(function(){
+    Route::prefix('user/dashboard')->namespace('user')->name('user.')->middleware('ensureUserRole:user')->group(function(){
         Route::get('/',[UserDashboard::class, 'index'])->name('dashboard');
     });
 
